@@ -7,6 +7,7 @@ import Solutions from './pages/Solutions.jsx'
 import Industries from './pages/Industries.jsx'
 import Resources from './pages/Resources.jsx'
 import Portfolio from './pages/Portfolio.jsx'
+import Consultation from './pages/Consultation.jsx'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/consultation" element={<Consultation />} />
+        <Route path="/contact" element={<Consultation />} />
       </Routes>
       <Footer />
     </HashRouter>

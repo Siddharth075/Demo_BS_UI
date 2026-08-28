@@ -46,7 +46,7 @@ export default function Navbar() {
           <a className="nav-call" href={`tel:${PHONE.replace(/\s/g, '')}`}>
             <Phone size={14} /> Call us
           </a>
-          <a href="#consult" className="btn btn-primary nav-cta">
+          <a href="#/consultation" className="btn btn-primary nav-cta">
             Get consultation
           </a>
           <button
@@ -84,7 +84,7 @@ export default function Navbar() {
           )
         )}
         <a
-          href="#consult"
+          href="#/consultation"
           className="btn btn-primary"
           style={{ marginTop: '18px', width: '100%' }}
           onClick={() => setOpen(false)}
