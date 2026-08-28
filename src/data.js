@@ -18,7 +18,7 @@ export const NAV = [
   },
   {
     label: 'Solutions',
-    href: '#solutions',
+    href: '#/solutions',
     items: [
       'Startup MVPs',
       'SaaS Platforms',

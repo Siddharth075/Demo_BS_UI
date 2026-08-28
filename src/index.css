@@ -1977,3 +1977,236 @@ h1, h2, h3, h4 {
   .svc-hero { padding-top: 110px; }
   .svc-decision { padding: 24px 20px; }
 }
+
+/* ============ SOLUTIONS PAGE ============ */
+
+/* Solution sequence section */
+.sol-sequence {
+  padding: 104px 0;
+  background: var(--offwhite);
+}
+
+.sol-sequence-head {
+  max-width: 620px;
+  margin-bottom: 56px;
+}
+
+.sol-sequence-head h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 16px;
+}
+
+.sol-sequence-head p {
+  color: var(--slate);
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.sol-card {
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: var(--r-md);
+  padding: 32px 28px;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: #CBD5E1;
+}
+
+.sol-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sol-card-num {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--silver);
+  line-height: 1;
+}
+
+.sol-card-path {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.sol-path--build {
+  color: var(--royal-bright);
+  border-color: rgba(37, 99, 235, 0.25);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.sol-path--operate {
+  color: #059669;
+  border-color: rgba(5, 150, 105, 0.25);
+  background: rgba(5, 150, 105, 0.06);
+}
+
+.sol-path--improve {
+  color: #D97706;
+  border-color: rgba(217, 119, 6, 0.25);
+  background: rgba(217, 119, 6, 0.06);
+}
+
+.sol-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--offwhite);
+  border: 1px solid var(--silver);
+  display: grid;
+  place-items: center;
+  color: var(--royal-bright);
+  margin-bottom: 20px;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.sol-card:hover .sol-card-icon {
+  transform: rotate(-6deg) scale(1.06);
+  background: var(--navy-800);
+  color: var(--white);
+}
+
+.sol-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy-800);
+  margin-bottom: 10px;
+}
+
+.sol-card p {
+  font-size: 14.5px;
+  color: var(--slate);
+  line-height: 1.65;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Roles section */
+.sol-roles {
+  padding: 104px 0;
+  background: var(--white);
+}
+
+.sol-roles-head {
+  max-width: 560px;
+  margin-bottom: 56px;
+}
+
+.sol-roles-head h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 0;
+}
+
+.sol-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.sol-role-card {
+  background: var(--offwhite);
+  border: 1px solid var(--silver);
+  border-radius: var(--r-lg);
+  padding: 36px 32px;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.sol-role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: #CBD5E1;
+}
+
+.sol-role-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--white);
+  border: 1px solid var(--silver);
+  display: grid;
+  place-items: center;
+  color: var(--royal-bright);
+  margin-bottom: 24px;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.sol-role-card:hover .sol-role-icon {
+  transform: rotate(-6deg) scale(1.06);
+  background: var(--navy-800);
+  color: var(--white);
+}
+
+.sol-role-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy-800);
+  margin-bottom: 10px;
+}
+
+.sol-role-card p {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+.sol-role-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--silver);
+  padding-top: 20px;
+}
+
+.sol-role-list li {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--royal-bright);
+  padding: 6px 0;
+  position: relative;
+  padding-left: 18px;
+}
+
+.sol-role-list li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: var(--royal-bright);
+  opacity: 0.5;
+}
+
+/* Solutions responsive */
+@media (max-width: 900px) {
+  .sol-roles-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .sol-grid { grid-template-columns: 1fr; }
+}
