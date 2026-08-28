@@ -32,7 +32,7 @@ export const NAV = [
   },
   {
     label: 'Industries',
-    href: '#industries',
+    href: '#/industries',
     items: [
       'Healthcare',
       'E-commerce',

@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Solutions from './pages/Solutions.jsx'
+import Industries from './pages/Industries.jsx'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/industries" element={<Industries />} />
       </Routes>
       <Footer />
     </HashRouter>

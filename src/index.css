@@ -2210,3 +2210,135 @@ h1, h2, h3, h4 {
 @media (max-width: 720px) {
   .sol-grid { grid-template-columns: 1fr; }
 }
+
+/* ============ INDUSTRIES PAGE ============ */
+
+.ind-table-section {
+  padding: 104px 0;
+  background: var(--white);
+}
+
+.ind-table-head {
+  display: grid;
+  grid-template-columns: 260px 1fr 160px;
+  gap: 24px;
+  align-items: center;
+  padding: 0 0 16px;
+  border-bottom: 2px solid var(--navy-800);
+  margin-bottom: 0;
+}
+
+.ind-col-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.ind-col-action {
+  text-align: right;
+}
+
+.ind-row {
+  display: grid;
+  grid-template-columns: 260px 1fr 160px;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--silver);
+  transition: background 0.3s var(--ease);
+}
+
+.ind-row:hover {
+  background: var(--offwhite);
+}
+
+.ind-row-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ind-row-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--offwhite);
+  border: 1px solid var(--silver);
+  display: grid;
+  place-items: center;
+  color: var(--royal-bright);
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.ind-row:hover .ind-row-icon {
+  transform: rotate(-6deg) scale(1.06);
+  background: var(--navy-800);
+  color: var(--white);
+}
+
+.ind-row-name h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--navy-800);
+  margin: 0;
+}
+
+.ind-row-desc {
+  font-size: 14.5px;
+  color: var(--slate);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ind-row-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--royal-bright);
+  justify-self: end;
+  transition: color 0.25s var(--ease);
+  white-space: nowrap;
+}
+
+.ind-row-link:hover {
+  color: var(--royal);
+}
+
+.ind-row-link svg {
+  transition: transform 0.25s var(--ease);
+}
+
+.ind-row-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* Industries responsive */
+@media (max-width: 900px) {
+  .ind-table-head {
+    display: none;
+  }
+
+  .ind-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .ind-row-link {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .ind-table-section {
+    padding: 72px 0;
+  }
+}
