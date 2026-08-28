@@ -60,7 +60,7 @@ export const NAV = [
   },
   {
     label: 'Portfolio',
-    href: '#portfolio',
+    href: '#/portfolio',
   },
 ]
 

@@ -60,10 +60,10 @@ export default function Navbar() {
       </div>
 
       <div className={`mobile-panel ${open ? 'open' : ''}`}>
-        {NAV.map((item) => (
-          <details key={item.label}>
-            <summary>{item.label}</summary>
-            {item.items && (
+        {NAV.map((item) =>
+          item.items ? (
+            <details key={item.label}>
+              <summary>{item.label}</summary>
               <div style={{ paddingBottom: '8px' }}>
                 {item.items.map((sub) => (
                   <a key={sub} href={item.href} onClick={() => setOpen(false)}>
@@ -71,9 +71,18 @@ export default function Navbar() {
                   </a>
                 ))}
               </div>
-            )}
-          </details>
-        ))}
+            </details>
+          ) : (
+            <a
+              key={item.label}
+              href={item.href}
+              className="mobile-single-link"
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </a>
+          )
+        )}
         <a
           href="#consult"
           className="btn btn-primary"

@@ -44,9 +44,30 @@ const CATEGORIES = [
 ]
 
 const DECISION_INDEX = [
-  { label: 'Compare', value: 'Adjacent options by fit' },
-  { label: 'Risk', value: 'Integration and release evidence' },
-  { label: 'Act', value: 'Move into a scoped discussion' },
+  {
+    step: '01',
+    label: 'Compare',
+    title: 'Adjacent options by fit',
+    desc: 'Evaluate web, mobile, and cloud options tailored to your build responsibility.',
+    icon: Search,
+    tag: 'Fit Audit',
+  },
+  {
+    step: '02',
+    label: 'Risk',
+    title: 'Integration and release evidence',
+    desc: 'Verify API contracts, deployment routines, and release safety nets.',
+    icon: Shield,
+    tag: 'Release Evidence',
+  },
+  {
+    step: '03',
+    label: 'Act',
+    title: 'Move into a scoped discussion',
+    desc: 'Transition from requirements into a structured development timeline.',
+    icon: Code2,
+    tag: 'Scoped Plan',
+  },
 ]
 
 export default function Services() {
@@ -80,15 +101,27 @@ export default function Services() {
 
         <div className="container">
           <div className="svc-decision reveal reveal-delay-4">
-            <h3 className="svc-decision-title">Decision index</h3>
-            <span className="svc-decision-label">Software development services</span>
+            <div className="svc-decision-header">
+              <span className="eyebrow">Decision index</span>
+              <h3>Software development services</h3>
+            </div>
             <div className="svc-decision-grid">
-              {DECISION_INDEX.map((d) => (
-                <div className="svc-decision-item" key={d.label}>
-                  <span className="svc-di-label">{d.label}</span>
-                  <span className="svc-di-value">{d.value}</span>
-                </div>
-              ))}
+              {DECISION_INDEX.map((d) => {
+                const IconComp = d.icon
+                return (
+                  <div className="svc-decision-card" key={d.label}>
+                    <div className="svc-dec-top">
+                      <span className="svc-dec-step-num">{d.step}</span>
+                      <span className="svc-dec-tag">{d.tag}</span>
+                    </div>
+                    <div className="svc-dec-icon-wrap">
+                      <IconComp size={20} />
+                    </div>
+                    <h4>{d.title}</h4>
+                    <p>{d.desc}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

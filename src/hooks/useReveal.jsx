@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export default function useReveal() {
+export default function useReveal(deps = []) {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal')
     if (!('IntersectionObserver' in window)) {
@@ -16,9 +16,16 @@ export default function useReveal() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0.1, rootMargin: '0px 0px -5% 0px' },
     )
-    els.forEach((el) => io.observe(el))
+    els.forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('is-visible')
+      } else {
+        io.observe(el)
+      }
+    })
     return () => io.disconnect()
-  }, [])
+  }, Array.isArray(deps) ? deps : [deps])
 }
