@@ -47,7 +47,7 @@ export const NAV = [
   },
   {
     label: 'Resources',
-    href: '#resources',
+    href: '#/resources',
     items: [
       'Blog',
       'Build Guides',

@@ -5,6 +5,7 @@ import {
   User, Briefcase, Headphones,
 } from 'lucide-react'
 import useReveal from '../hooks/useReveal.jsx'
+import CompareOptions from '../components/CompareOptions.jsx'
 
 const DECISION_INDEX = [
   { label: 'Compare', value: 'Adjacent options by fit' },
@@ -182,69 +183,12 @@ export default function Solutions() {
       </section>
 
       {/* Solution Planning CTA */}
-      <section className="close" id="consult">
-        <div className="container" style={{ padding: '104px 0' }}>
-          <div className="close-grid">
-            <div>
-              <span className="section-eyebrow reveal" style={{ color: '#9CC3FF' }}>
-                Solution planning
-              </span>
-              <h2 className="reveal reveal-delay-1">
-                Software solutions should start with evidence, not a feature list
-              </h2>
-              <p className="lead reveal reveal-delay-2">
-                The next step is to clarify the first useful release, control
-                surfaces, integration risk and support ownership so the build has
-                a defensible sequence.
-              </p>
-              <div className="svc-compare-tabs reveal reveal-delay-2">
-                <span className="svc-tab active">Launch slice</span>
-                <span className="svc-tab">Control surface</span>
-                <span className="svc-tab">Improvement loop</span>
-              </div>
-              <div className="close-actions reveal reveal-delay-3">
-                <a href="#consult" className="btn btn-glass pulse-cta">
-                  Plan this solution
-                </a>
-                <a
-                  href="#/"
-                  className="btn btn-glass"
-                  style={{
-                    borderColor: 'rgba(255,255,255,0.3)',
-                    background: 'rgba(255,255,255,0.1)',
-                  }}
-                >
-                  See pricing logic <ArrowRight size={16} />
-                </a>
-              </div>
-            </div>
-            <div className="close-panel reveal reveal-delay-2">
-              <h4>Next steps</h4>
-              <div className="close-item">
-                <div className="ci-icon"><Rocket size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Launch slice</div>
-                  <div className="ci-sub">Define the smallest release that proves value and tests assumptions.</div>
-                </div>
-              </div>
-              <div className="close-item">
-                <div className="ci-icon"><LayoutDashboard size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Control surface</div>
-                  <div className="ci-sub">Identify dashboards, roles and admin flows needed from day one.</div>
-                </div>
-              </div>
-              <div className="close-item">
-                <div className="ci-icon"><RefreshCw size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Improvement loop</div>
-                  <div className="ci-sub">Plan the feedback, measurement and iteration cycle after first release.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Compare Options */}
+      <CompareOptions
+        eyebrow="Solution planning"
+        title="Software solutions should start with evidence, not a feature list"
+        subtitle="The next step is to clarify the first useful release, control surfaces, integration risk and support ownership so the build has a defensible sequence."
+      />
     </main>
   )
 }

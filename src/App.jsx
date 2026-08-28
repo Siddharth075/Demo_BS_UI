@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Solutions from './pages/Solutions.jsx'
 import Industries from './pages/Industries.jsx'
+import Resources from './pages/Resources.jsx'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/industries" element={<Industries />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
       <Footer />
     </HashRouter>

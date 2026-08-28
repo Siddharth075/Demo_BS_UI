@@ -4,6 +4,7 @@ import {
   Landmark, Truck, Factory, Dumbbell, Newspaper, Briefcase,
 } from 'lucide-react'
 import useReveal from '../hooks/useReveal.jsx'
+import CompareOptions from '../components/CompareOptions.jsx'
 
 const DECISION_INDEX = [
   { label: 'Compare', value: 'Adjacent options by fit' },
@@ -126,70 +127,12 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* Compare CTA */}
-      <section className="close" id="consult">
-        <div className="container" style={{ padding: '104px 0' }}>
-          <div className="close-grid">
-            <div>
-              <span className="section-eyebrow reveal" style={{ color: '#9CC3FF' }}>
-                Compare options
-              </span>
-              <h2 className="reveal reveal-delay-1">
-                Industries we serve should lead to a clear next decision
-              </h2>
-              <p className="lead reveal reveal-delay-2">
-                Use the index to compare fit, risk and ownership. When the right
-                path is visible, Blinking Soft can turn it into a scoped project
-                conversation.
-              </p>
-              <div className="svc-compare-tabs reveal reveal-delay-2">
-                <span className="svc-tab active">Fit comparison</span>
-                <span className="svc-tab">Risk view</span>
-                <span className="svc-tab">Scoped next step</span>
-              </div>
-              <div className="close-actions reveal reveal-delay-3">
-                <a href="#consult" className="btn btn-glass pulse-cta">
-                  Contact team
-                </a>
-                <a
-                  href="#/"
-                  className="btn btn-glass"
-                  style={{
-                    borderColor: 'rgba(255,255,255,0.3)',
-                    background: 'rgba(255,255,255,0.1)',
-                  }}
-                >
-                  View process <ArrowRight size={16} />
-                </a>
-              </div>
-            </div>
-            <div className="close-panel reveal reveal-delay-2">
-              <h4>Next steps</h4>
-              <div className="close-item">
-                <div className="ci-icon"><Heart size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Fit comparison</div>
-                  <div className="ci-sub">Evaluate the right capability and stack for your specific industry workflows.</div>
-                </div>
-              </div>
-              <div className="close-item">
-                <div className="ci-icon"><Building2 size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Risk view</div>
-                  <div className="ci-sub">Understand compliance, data and integration constraints for your domain.</div>
-                </div>
-              </div>
-              <div className="close-item">
-                <div className="ci-icon"><ArrowRight size={19} strokeWidth={1.8} /></div>
-                <div>
-                  <div className="ci-title">Scoped next step</div>
-                  <div className="ci-sub">Move from discussion into a structured plan with clear ownership.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Compare Options */}
+      <CompareOptions
+        eyebrow="Compare options"
+        title="Industries we serve should lead to a clear next decision"
+        subtitle="Use the index to compare fit, risk and ownership. When the right path is visible, Blinking Soft can turn it into a scoped project conversation."
+      />
     </main>
   )
 }
