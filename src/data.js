@@ -1,7 +1,7 @@
 export const NAV = [
   {
     label: 'Services',
-    href: '#services',
+    href: '#/services',
     items: [
       'Web Development',
       'Mobile Apps',

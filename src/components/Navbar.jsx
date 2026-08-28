@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, Phone, ArrowUpRight } from 'lucide-react'
 import { NAV, PHONE } from '../data.js'
 
 const LogoMark = () => (
-  <a href="#top" className="brand">
+  <a href="#/" className="brand">
     <span className="brand-mark" aria-hidden="true" />
     <span className="brand-name">
       Blinking<span>Soft</span>
